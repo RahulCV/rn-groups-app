@@ -26,8 +26,8 @@ import {
 import 'react-native-gesture-handler';
 import {NavigationContainer} from '@react-navigation/native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import MyStack from './src/navigation/rootnavigator';
 /**
  navigation.toggleDrawer();
 navigation.openDrawer();
@@ -43,9 +43,11 @@ const App: () => React$Node = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <NavigationContainer />
-      </SafeAreaView>
+     
+        <NavigationContainer>
+          <MyStack />
+        </NavigationContainer>
+     
     </>
   );
 };
