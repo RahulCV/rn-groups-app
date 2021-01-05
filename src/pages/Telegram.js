@@ -1,15 +1,17 @@
 import React from 'react';
-import {StyleSheet, Text,TouchableOpacity, View} from 'react-native';
-
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import { DrawerActions } from '@react-navigation/native';
 const Telegram = ({navigation}) => {
   return (
-      <TouchableOpacity onPress={() => { navigation.openDrawer(); }}>
-          <View >
-              <Text>Telegram</Text>
-
-          </View>
-      </TouchableOpacity>
-      
+    <TouchableOpacity
+      onPress={() => {
+              navigation.dispatch(DrawerActions.openDrawer());
+        //navigation.openDrawer();
+      }}>
+      <View>
+        <Text>Telegram</Text>
+      </View>
+    </TouchableOpacity>
   );
 };
 
