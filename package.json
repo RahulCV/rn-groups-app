@@ -7,7 +7,13 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+        "debug": "adb shell input keyevent 82",
+        "remotedev": "remotedev --hostname=localhost --port=8000",
+        "release:android": "cd android && ./gradlew assembleRelease",
+        "build:android": "rm -rf ./android/app/src/main/res/drawable-* && rm -rf ./android/app/src/main/res/raw && cd android && ./gradlew clean &&  ./gradlew assembleRelease ",
+        "bundle:android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/",
+        "build:androidBundle": "rm -rf ./android/app/src/main/res/drawable-* && rm -rf ./android/app/src/main/res/raw && cd android && ./gradlew clean && ./gradlew bundleRelease"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
