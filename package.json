@@ -1,5 +1,5 @@
 {
-  "name": "GroupsApp",
+  "name": "groupapp",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,37 +7,32 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint .",
-        "debug": "adb shell input keyevent 82",
-        "remotedev": "remotedev --hostname=localhost --port=8000",
-        "release:android": "cd android && ./gradlew assembleRelease",
-        "build:android": "rm -rf ./android/app/src/main/res/drawable-* && rm -rf ./android/app/src/main/res/raw && cd android && ./gradlew clean &&  ./gradlew assembleRelease ",
-        "bundle:android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/",
-        "build:androidBundle": "rm -rf ./android/app/src/main/res/drawable-* && rm -rf ./android/app/src/main/res/raw && cd android && ./gradlew clean && ./gradlew bundleRelease"
+    "lint": "eslint ."
   },
   "dependencies": {
-    "@react-native-community/masked-view": "^0.1.10",
-    "@react-navigation/bottom-tabs": "^5.11.2",
-    "@react-navigation/drawer": "^5.11.4",
-    "@react-navigation/native": "^5.8.10",
-    "@react-navigation/stack": "^5.12.8",
-    "react": "16.13.1",
-    "react-native": "0.63.4",
-    "react-native-gesture-handler": "^1.9.0",
-    "react-native-paper": "^4.5.0",
-    "react-native-reanimated": "^1.13.2",
-    "react-native-safe-area-context": "^3.1.9",
-    "react-native-screens": "^2.16.1"
+    "@react-native-community/masked-view": "^0.1.11",
+    "@react-navigation/bottom-tabs": "^5.11.11",
+    "@react-navigation/drawer": "^5.12.5",
+    "@react-navigation/native": "^5.9.4",
+    "@react-navigation/stack": "^5.14.5",
+    "react": "17.0.1",
+    "react-native": "0.64.2",
+    "react-native-elements": "^3.4.2",
+    "react-native-gesture-handler": "^1.10.3",
+    "react-native-reanimated": "^2.2.0",
+    "react-native-safe-area-context": "^3.2.0",
+    "react-native-screens": "^3.4.0",
+    "react-native-vector-icons": "^8.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
+    "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",
     "babel-jest": "^26.6.3",
-    "eslint": "^7.17.0",
+    "eslint": "7.14.0",
     "jest": "^26.6.3",
     "metro-react-native-babel-preset": "^0.64.0",
-    "react-test-renderer": "16.13.1"
+    "react-test-renderer": "17.0.1"
   },
   "jest": {
     "preset": "react-native"
